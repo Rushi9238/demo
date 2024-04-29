@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const About = () => {
+    const naviagte=useNavigate()
   return (
     <>
     <div>AboutPage</div>
-    <Link to={'/'}><button>Click Go to Home</button></Link>
+    <button onClick={()=>naviagte('/')}>Click Go to Home</button>
     <br />
     <br />
 
-   <Link to={'/contact'}> <button>Click Go to Contact</button></Link>
+    <button onClick={()=>naviagte('/contact')}>Click Go to Contact</button>
     </>
   )
 }
